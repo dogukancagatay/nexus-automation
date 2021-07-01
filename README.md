@@ -9,7 +9,7 @@ With this sample configuration, the following steps are automated;
 - Adds APT repositories.
 - Adds Docker repositories.
 - Adds raw repositories.
-
+- Adds default role capability. (for anonymous access)
 
 ## Installation
 

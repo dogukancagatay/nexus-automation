@@ -50,5 +50,6 @@ addAndRunScript raw rawRepositories.groovy
 addAndRunScript security security.groovy
 addAndRunScript docker dockerRepositories.groovy
 addAndRunScript apt aptRepositories.groovy
+addAndRunScript capability addDefaultRoleCap.groovy
 
 printf "\nProvisioning Scripts Completed\n\n"
