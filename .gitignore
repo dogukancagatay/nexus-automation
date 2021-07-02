@@ -1,2 +1,5 @@
+.groovy
 data
 notes.txt
+run.sh
+provision.sh

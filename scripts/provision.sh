@@ -46,10 +46,13 @@ printf "Publishing and executing on $host\n"
 
 # Running corresponding script to perform tasks below
 
-addAndRunScript raw rawRepositories.groovy
 addAndRunScript security security.groovy
-addAndRunScript docker dockerRepositories.groovy
-addAndRunScript apt aptRepositories.groovy
+addAndRunScript raw addRawRepos.groovy
+addAndRunScript docker addDockerRepos.groovy
+addAndRunScript apt addAptRepos.groovy
+addAndRunScript maven addMavenRepos.groovy
+addAndRunScript helm addHelmRepos.groovy
 addAndRunScript capability addDefaultRoleCap.groovy
+addAndRunScript mavenModify modifyMavenRepos.groovy
 
 printf "\nProvisioning Scripts Completed\n\n"

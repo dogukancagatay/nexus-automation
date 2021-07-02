@@ -11,11 +11,12 @@ def capabilityRegistry = container.lookup(DefaultCapabilityRegistry.class.getNam
 // Capability specific values/properties
 // def capabilityType = CapabilityType.capabilityType("rutaut")
 // def capabilityProps = ['httpHeader': 'some_auth_header']
+
 def capabilityType = CapabilityType.capabilityType("defaultrole")
 def capabilityProps = ['role': 'nx-anonymous']
 def capabilityNotes = 'configured through scripting api'
 
-//check if existing Rut Auth capability exists
+// Check if existing Rut Auth capability exists
 DefaultCapabilityReference existing = capabilityRegistry.all.find { CapabilityReference capabilityReference ->
   capabilityReference.context().descriptor().type() == capabilityType
 }
