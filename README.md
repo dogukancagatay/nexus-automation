@@ -22,7 +22,7 @@ That's why, we need to create `data` directory (for Nexus data) with correct per
 ```sh
 mkdir -p data && \
 cp -r etc data/ && \
-sudo chown -R 200:200 data
+sudo chown -R 200:200 data # no need on MacOS
 ```
 
 Then, start Nexus instance.

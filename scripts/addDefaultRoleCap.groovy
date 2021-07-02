@@ -8,10 +8,10 @@ returnValue = JsonOutput.toJson([result : 'Did NOT add Default Role'])
 
 def capabilityRegistry = container.lookup(DefaultCapabilityRegistry.class.getName())
 
-//Capability specific values/properties
+// Capability specific values/properties
 // def capabilityType = CapabilityType.capabilityType("rutaut")
-def capabilityType = CapabilityType.capabilityType("defaultrole")
 // def capabilityProps = ['httpHeader': 'some_auth_header']
+def capabilityType = CapabilityType.capabilityType("defaultrole")
 def capabilityProps = ['role': 'nx-anonymous']
 def capabilityNotes = 'configured through scripting api'
 
@@ -20,8 +20,8 @@ DefaultCapabilityReference existing = capabilityRegistry.all.find { CapabilityRe
   capabilityReference.context().descriptor().type() == capabilityType
 }
 
-//If it doesn't, add it with given values/properties
-//This should also enable the rutauth-realm
+// If it doesn't, add it with given values/properties
+// This should also enable the rutauth-realm
 if (!existing)
 {
   log.info('Default role capability created as: {}',
@@ -33,5 +33,5 @@ if (!existing)
 return returnValue
 
 
-// references
+// Reference
 // https://community.sonatype.com/t/add-and-enable-rut-auth-capability-using-scripting-api/657/3
