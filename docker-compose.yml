@@ -4,7 +4,7 @@ services:
   nexus:
     image: sonatype/nexus3:latest
     environment:
-      JAVA_MAX_MEM: "4g"
+      JAVA_MAX_MEM: "2g"
     ulimits:
       nofile:
         soft: 65536

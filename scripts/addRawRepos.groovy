@@ -18,6 +18,7 @@ def proxyMap = [
   'downloads.apache.org': 'https://downloads.apache.org',
   'update.k3s.io': 'https://update.k3s.io',
   'storage.googleapis.com': 'https://storage.googleapis.com',
+  'get.helm.sh': 'https://get.helm.sh',
 ]
 
 proxyMap.each{entry ->

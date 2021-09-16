@@ -13,7 +13,6 @@ password="${NEXUS_PASSWORD:-admin123}"
 
 # add the context if you are not using the root context
 host="${NEXUS_HOST:-http://nexus:8081}"
-# host="${NEXUS_HOST:-http://localhost:8081}"
 
 scripts_dir="${SCRIPTS_DIR:-/scripts}"
 

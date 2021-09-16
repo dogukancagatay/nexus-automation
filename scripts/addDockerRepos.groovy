@@ -107,4 +107,23 @@ if (repo != null) {
   repo.getConfiguration().getAttributes().'negativeCache'.'timeToLive' = negativeCacheTTL
 }
 
+// Add ghcr.io
+repo = repository.createDockerProxy('docker-ghcr.io-proxy',             // name
+                             'https://ghcr.io',           // remoteUrl
+                             'REGISTRY',                  // indexType
+                             null,                        // indexUrl
+                             8087,                        // httpPort
+                             null,                        // httpsPort
+                             blobstore,                   // blobStoreName
+                             strictContentTypeValidation, // strictContentTypeValidation
+                             v1Enabled                    // v1Enabled
+                             )
+
+if (repo != null) {
+  log.info("Modify repository: $repo.name")
+  repo.getConfiguration().getAttributes().'proxy'.'contentMaxAge' = contentMaxAge
+  repo.getConfiguration().getAttributes().'proxy'.'metadataMaxAge' = metadataMaxAge
+  repo.getConfiguration().getAttributes().'negativeCache'.'timeToLive' = negativeCacheTTL
+}
+
 log.info('Script dockerRepositories completed successfully')
